@@ -1,0 +1,9 @@
+syntax = "proto3";
+package squareup.dinosaurs;
+
+option java_package = "com.bree.dinosaurs";
+
+message Dinosaur {
+  string name = 1;
+  optional int32 age = 4;
+}
