@@ -5,5 +5,11 @@ option java_package = "com.bree.dinosaurs";
 
 message Dinosaur {
   string name = 1;
-  optional int32 age = 4;
+  optional int32 age = 2;
+  repeated Dinosaur friends = 3;
+}
+
+service DinosaurTest {
+  // A simple RPC.
+  rpc Reflect(Dinosaur) returns (Dinosaur) {}
 }
